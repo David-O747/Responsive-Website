@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="">
+
+     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+<style>
+
+ /*   Review Style */
+ @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+
+ .page5 {
+        font-family: Barlow Semi Condensed, sans-serif;
+        font-size: 1rem;
+        font-weight: var(--fw-regular);
+        color:  hsl(0, 0%, 100%);
+        background-color: var(--clr-neutral-gray);
+        margin: 4em auto;
+        height: 70vh;
+        width: 90vw;
+        overflow-y: scroll;
+        background-color:hsl(0, 0%, 81%); ;
+    }
+    
+    .page5 h2
+    p {
+        margin: 0;
+        padding: 0;
+        font-family: Barlow Semi Condensed, sans-serif;
+    }
+    
+     .page5 .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+    .page5 h1{
+        color: black;
+    }
+    
+    /*card styling*/
+    .card {
+        grid-area: card;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 2em 1.75em;
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 4.5rem auto;
+        grid-template-rows: 2rem 2rem ;
+        grid-template-areas:
+            "img name"
+            "img title"
+            "main-quote main-quote"
+            "testimonial testimonial";
+    }
+    
+    .avatar {
+        border-radius: 4rem;
+        grid-area: img;
+        border: solid;
+        border-color: var(--clr-neutral-gray);
+    }
+    
+    .name {
+        grid-area: name;
+        font-size: .8125rem;
+        font-weight: 500;
+    }
+    
+   .page5 .title {
+        grid-area: title;
+        font-size: .6875rem;
+        opacity: 50%;
+        margin-top: 2px;
+    }
+    
+    .quote {
+        grid-area: main-quote;
+    }
+    
+    .testimonial {
+        font-size: .8125rem;
+        grid-area: testimonial;
+        opacity: 70%;
+        line-height: 1.6;
+    }
+    
+    /*single-card-styling*/
+    
+    .card1 {
+        background: var(--clr-primary-violet);
+        color: var(--clr-primary-white);
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+    }
+    
+    .card2 {
+        background-color: var(--clr-primary-gray-blue);
+    }
+    
+    .card4 {
+        background-color: var(--clr-primary-black-blue);
+        color: var(--clr-primary-white);
+    }
+    
+    .card3,
+    .card5 {
+        background-color: var(--clr-primary-white);
+        color: var(--clr-primary-black-blue);
+    }
+    
+    @media (min-width: 640px) {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(250px, auto));
+            grid-template-rows: repeat(2, minmax(250px, auto));
+            grid-template-areas: 
+            "card1 card1 card2 card5"
+            "card3 card4 card4 card5";
+        }
+    
+    
+      
+        .card1 {
+            grid-area: card1;
+            background:  hsl(263, 55%, 52%);
+            color: hsl(0, 0%, 100%);
+            background-image: url(images/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-position: 100% 0%;
+        }
+        
+        .card2 {
+            grid-area: card2;
+            background-color: hsl(217, 19%, 35%);
+        }
+        
+        .card3 {
+            grid-area: card3;
+        }
+        
+        .card4 {
+            grid-area: card4;
+            background-color: hsl(219, 29%, 14%);
+            color: hsl(0, 0%, 100%);
+        }
+        
+        .card3 {
+            background-color: hsl(0, 0%, 100%);;
+            color: hsl(219, 29%, 14%);
+            grid-area: card3;
+        }
+    
+        .card5 {
+            background-color:hsl(0, 0%, 100%) ;
+            color:  hsl(219, 29%, 14%);
+            grid-area: card5;
+        }
+    }
+    /* contact form */
+
+    form {
+     display: flex;
+     min-width: 25rem;
+     margin: auto;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     background-color: #5d5d5e;
+     width: 100%;
+     height: 70vh;
+     background-image: url(images-infotech/cover\ image\ 1.avif);
+     background-blend-mode: screen;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 10px;
+                                 
+                             
+                                
+     .title {
+     font-family: 'Pacifico', cursive;
+     color: #161819;
+     font-size: 2.5rem;
+     z-index: inherit;
+                        }
+
+    .form-control {
+     background-color: #f2f6f8;
+     border-radius: 2rem;
+     border: none;
+     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+                                   
+      &.thick {
+        height: 3.3rem;
+        padding: .5rem 3.5rem;
+                     }
+
+  &:focus {
+  background-color: #f2f6f8;
+  border: 2px solid black;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+            }
+                               }
+                                
+                                .message .form-control {
+                                      padding: .5rem 1.8rem;
+                                }
+                                
+                               ::placeholder {
+                                 font-family: 'Quicksand', sans-serif;
+                                   font-weight: 600;
+                                 font-size: 1.1rem;
+                                 color: #838788;
+                                 position: relative;
+                                 left: 0;
+                               }
+                                
+                               input,
+                               textarea {
+                                   font-family: 'Quicksand', sans-serif;
+                                 color: #212529;
+                                 font-size: 1.1rem;
+                               }
+                                
+                               .icon {
+                                 color: #57565c;
+                                 height: 1.3rem;
+                                 position: absolute;
+                                 left: 1.5rem;
+                                 top: 1.1rem;
+                               }
+                             }
+                             
+.forms{
+ /*  background-color: #838788;*/
+ align-content: space-around;
+                                
+  }
+                    
+                             
+ .btn.btn-primary {
+ font-family: 'Quicksand', sans-serif;
+ font-weight: bold;
+ height: 2.5rem;
+ line-height: 2.5rem;
+ padding: 0 3rem;
+  border: 0;
+ border-radius: 3rem;
+ background-image:linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+ background-size: 300% 100%;
+ transition: all 0.3s ease-in-out;
+                             }
+                             
+.btn.btn-primary:hover:enabled {
+ box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+ background-size: 100% 100%;
+ transform: translateY(-0.15em);
+                               
+                             }
+                                   
+                      
+                             
+  /* copyright */
+                                    
+.copyright{
+   font-size: x-small;
+   font-style: italic;
+   width: 100%;
+   /*height: 0.4vh;*/
+   text-align: center;
+   justify-content: center;
+   display: inline-flex;
+   gap: 1vw;
+  
+}
+@media screen and (max-width:768px) {
+     .copyright{
+        display: none;
+     }
+}
+        
+                             
+                             
+                                                          
+                               
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+                    <header class="header">
+                       <!--- <a href="page"> <img src="/images-infotech/logo.svg" class="logo"></a>  = changed logog design -->
+                     <a href="">  <svg width="100" height="100" class="svg" >
+                            <rect x="0" width="40"  height="40" y="0" fill="black"/>
+                           <text x="20%" y="30" font-family="Arial" font-size="30" font-weight="bolder" fill="white" text-anchor="middle" alignment-baseline="middle">T</text>
+                       
+                    </svg></a>
+                       
+                        <nav class="navbar">
+                            
+                                <li><a href="#page2">About</a></li>
+                                <li><a href="#page3">Product</a></li>
+                                <li><a href="#page4">Features</a></li>
+                                <li><a a href="#page5">Reviews</a></li>
+                                <li><a href="#page6"><strong>Contact</strong></a></li>
+                        </nav>
+                    </header>
+
+
+                    <main>
+                             <!-- PAGE 1 -->
+
+                        <section class="page">
+
+                            <div class="box box2">
+
+                                <div class="line1">
+                                <div class="new"><h2>NEW</h2></div>
+                                <div class="available"><h2>FEATURES AVAILABLE</h2></div>   
+                            </div>
+
+                            <div class="line2">
+                            <h1>Discover iphone iOS 16</h1>
+                                <h1>New Phone Case</h1>
+                            </div>
+
+                            <div class="line3">
+                                <h2>Designed for Apple Intelligence.</h2>
+                                <h2>Personal,Private,powerful.</h2>
+                            </div>
+
+                             <div class="line4">
+                                <div class="bton">   <a href="#page3">  <button><h2>VIEW NOW</h2></button>  </a></div>
+                                <div class="text"><h2>TO FIND OUT MORE !</h2></div>
+                             </div>
+                            
+
+
+
+                            </div>
+
+                            <div class="box box1">
+                                <img src="/images-infotech/istockphoto-1296404318-612x612.jpg"/>
+                            </div>
+                            
+                            
+                        </section>
+
+                        <!--   PAGE 2 -->
+
+
+
+                        <section class="page2" id="page2">
+
+                            <div class="box box1">
+                        
+                                <ol>
+                               <li><h1>About Us</h1></li>
+                               
+                                </ol>
+                                <p>Welcome to <strong>Info Tech</strong>, your premier destination for
+                                    the latest insights and information on iPhone products
+                                    and accessories. 
+                                     <br>
+                                    Our mission is to educate technology enthusiasts by
+                                    providing comprehensive reviews, detailed guides,
+                                    and expert coverage of the newest iPhone cases and
+                                    features. 
+                                    <br>
+                                    We strive to empower our visitors with the knowledge
+                                    they need to make informed decisions about their
+                                    tech purchases. 
+                                    <br>
+                                    At Info Tech, we believe that understanding
+                                    technology should be accessible to everyone, and we
+                                    are committed to delivering high-quality content that
+                                    keeps you updated on all things iPhone.</p>
+                            </div>
+                          
+
+
+
+
+                        </section>
+                                
+                                       <!--     PAGE 3    -->
+                     
+
+
+                     <section class="page3" id="page3" >
+                     <div class="box box1"> Latest Products</div>
+                     
+                     <div class="box box2">
+                      <a href="product1.html" > <img src="/images-infotech/HRT22.jpg"/> </a>
+                        <p>New</p>
+                        <p>OtterBox Figura Series Cse
+                            with MagSafe for iphone 16 pro</p>
+                        
+                     </div> 
+                     <div class="box box3">
+                  <a href="product2.html" > <img src="/images-infotech/HRT72.jpg"/> </a>
+                        <p>New</p>
+                        <p>OtterBox Figura Series Cse
+                            with MagSafe for iphone 16 pro</p>
+                        
+                     </div>
+                     <div class="box box4">
+                    <a href="product3.html" ><img src="/images-infotech/HRTC2.jpg"/></a>
+                        <p>New</p>
+                        <p>OtterBox Figura Series Cse
+                            with MagSafe for iphone 16 pro</p>
+                       
+                     </div>
+                     <div class="box box5">
+                   <a href="product4.html"  > <img src="/images-infotech/MA7E4.jpg"/></a>
+                        <p>New</p>
+                        <p>OtterBox Figura Series Cse
+                            with MagSafe for iphone 16 pro</p>
+                        
+                     </div>
+                     
+
+                    
+                    </section>
+                     
+                        <!-- Page4  -->
+                         <section class="page4" id="page4">
+                            <div class="box box1">
+                                <h1>What's new?</h1>
+                            </div>
+                            <div class="box box2">
+
+                                <div>
+                               
+                                  <h3> 1. Firm Grip Design</h3>
+                                   <p>Our latest iPhone case covers feature an innovative firm grip design that ensures your phone stays securely in your hand. The textured surface not only enhances grip but also reduces the chances of accidental drops, providing peace of mind for everyday use.</p>
+                                 <h3>  2. Enhanced Drop Protection</h3> 
+                                    These cases are engineered with advanced shock-absorbing materials that offer superior drop protection. With reinforced corners and a raised edge around the screen, your device is safeguarded against impacts from various heights, making it ideal for active lifestyles.
+                                   <h3> 3. Sleek and Lightweight Profile</h3>
+                                    Despite their robust protection features, our new iPhone case covers maintain a sleek and lightweight profile. This means you can enjoy maximum protection without adding unnecessary bulk to your phone, allowing for easy portability and stylish aesthetics.</p>
+                            
+                                </div>
+                                <img src="/imags/istockphoto-1394934766-612x612.jpg"/>
+                            </div>
+                        
+                         </section>
+
+                            <!--   Page5  -->
+
+                     <section class="page5" id="page5">
+                        <div class="container">
+                            <h1>Reviews</h1>
+                            <div class="card card1">
+                              <img class="avatar" src="/Reviewimages/image-daniel.jpg">
+                              <p class="name">Daniel Clifford</p>
+                              <p class="title">Verified Graduate</p>
+                        
+                              <h2 class="quote"> Last week I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+                              in the company I joined. After getting this case My boss gave me a pay rise which was a big suprise thank you for this.</h1>
+                        
+                              <p class="testimonial">“ I was an EMT for many years  abefore I joined the bootcamp. I’ve been looking to make a 
+                              transition and have heard some people who had an amazing experience here. I signed up 
+                              for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+                              The next 12 weeks was the best - and most grueling - time of my life. The best part is when one of my clss mates introduced me to this amazing
+                              Apple product case afer he saw that my old one was getting rusty . I then made a purchase in store and my phone has never broke since that day. ”</p>
+                            </div>
+                            <div class="card card2">
+                              <img class="avatar" src="/Reviewimages/image-jonathan.jpg">
+                              <div class="name">Jonathan Walters</div>
+                              <div class="title">Verified Graduate</div>
+                        
+                              <h2 class="quote">The product was very stable and kept me motivated</h1>
+                        
+                              <p class="testimonial">“ I started to doubt it's clearness. I now work as a mobile engineer 
+                              for a big company and all my collegues have the same case. This was one of the best investments I’ve made in myself. ”</p>
+                            </div>
+                            <div class="card card3">
+                              <img class="avatar" src="Reviewimages/image-jeanette.jpg">
+                              <div class="name">Jeanette Harmon</div>
+                              <div class="title">Verified Graduate</div>
+                        
+                              <h2 class="quote">After buying this product my instagram followers increased in a day</h1>
+                        
+                              <p class="testimonial">“ Thank you for this amazing investment! I now have a job  where we all have simialr intersts just because of this Case.. ”</p>
+                            </div>
+                            <div class="card card4">
+                              <img class="avatar" src="/Reviewimages/image-patrick.jpg">
+                              <div class="name">Patrick Abrams</div>
+                              <div class="title">Verified Graduate</div>
+                        
+                              <h2 class="quote">Awesome product i wasn't expecting it to be so popular in this day and age.</h1>
+                        
+                              <p class="testimonial">“ However there was a time a flipped out beacsue i lost the case and The staff seem genuinely concerned about me. I then 
+                                showed them why i was so frightened about ths awesome product so i let them feel it's texture and they were so amazed they went and bought one themselves. ”</p>
+                            </div>
+                            <div class="card card5">
+                              <img class="avatar" src="/Reviewimages/image-kira.jpg">
+                              <div class="name">Kira Whittle</div>
+                              <div class="title">Verified Graduate</div>
+                        
+                              <h1 class="quote">Such a life-changing experience. Highly recommended!</h1>
+                        
+                              <p class="testimonial">“Before purchasing this phone case, I had never owned a protective accessory for my device.
+                                 I needed something durable from a brand that could ensure quality and style. A friend recommended this case, praising
+                                  its design and functionality. The entire product exceeded my expectations. It fits perfectly and I never felt like my
+                                   phone was bulky or hard to handle. The grip is particularly impressive; it made using my phone much easier than before. 
+                                   The drop protection feature, in particular, gave me confidence when carrying my phone around. I’ve often mentioned it to
+                                    others as an example of how a good case can enhance user experience. It certainly helped me feel secure about my device after 
+                                    trying out several options. 100% recommend! ”</p>
+                            </div>
+                          </div>
+
+
+
+                          
+
+
+
+
+                            </section>
+
+
+                            <!-- Page 6 -->
+                               <footer class="footer" id="page6"> <!-- add background color  moving one -->
+
+                                <form>
+                                    <div class="forms">
+                                    <h1 class="title text-center mb-4">Contact Us</h1>
+                            
+                                        <!-- Name -->
+                                        <div class="form-group position-relative">
+                                            <label for="formName" class="d-block">
+                                                <i class="icon" data-feather="user"></i>
+                                            </label>
+                                            <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+                                        </div>
+                            
+                                        <!-- E-mail -->
+                                        <div class="form-group position-relative">
+                                            <label for="formEmail" class="d-block">
+                                                <i class="icon" data-feather="mail"></i>
+                                            </label>
+                                            <input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+                                        </div>
+                            
+                                        <!-- Message -->
+                                        <div class="form-group message">
+                                            <textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+                                        </div>
+                                    
+                                        <!-- Submit btn -->
+                                        <div class="text-center" >
+                                         <a href="#thanks">  <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button></a>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                                <div class="copyright"> 
+                                    <p>Privacy Policy |  Terms of Use</p><br><br>
+                                    <p>COPY RIGHT 2024 UK</p>
+                                 </div>
+               
+
+
+
+                               </footer>
+                            
+
+
+
+
+              
+            
+                    </main>
+
+
+                  
+</body>
+</html>
+<body>
+    
+</body>
+</html>
+you need a portofolio brief 
+mim

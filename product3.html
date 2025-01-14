@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+.product {
+  height: 400vh;
+  width: 100%;
+  background: linear-gradient(100deg,#A9A9A9,#4B4B4B,#0000, #d3d3d3);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+  margin:  30 pxauto;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+@keyframes color {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.container{
+    height: 20%;
+    margin: auto;
+    border: 0px solid black;
+    box-shadow: #4B4B4B;
+    background-color: white;
+    display: flex;
+    width: 85%;
+    border-radius: 40px;
+    padding-top: 10%;
+    padding-right: 10%;
+    
+   } 
+   @media screen  and (max-width:680px){
+      .container{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+      
+
+   }
+   @media screen  and (min-width:680px) and (max-width:1280px){
+
+            .container{
+               width: 100%;
+               height: auto;
+                padding: 20px;
+
+            }
+            img{
+               width: 100%;
+               height: 40%;
+            }
+            h3{
+                font-size: smaller;
+            }
+
+   }
+   p{
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-wrap: wrap;
+  text-shadow: 3px 3px 5px rgb(117, 116, 116);
+
+
+
+   }
+
+    
+    
+
+img{
+    height: 85%;
+    width: 105%;
+    border-radius: 30px;
+}
+
+a{
+text-decoration: none;
+list-style: none;
+cursor: pointer;
+color: black;
+}
+h3:hover{
+    background-color: #4B4B4B;
+    color: white;
+}
+h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-wrap: wrap;
+  padding: 10px 5px;
+  border: 2px solid black;
+  background-color: #d3d3d3;
+  border-radius: 13px;
+  text-align: center;
+}
+@media screen  and (max-width:680px){
+    img{
+        display: none;
+    }
+    
+}
+
+
+
+</style>
+<body>
+    
+    <div class="product" id="product">
+        <footer class="container">
+            <img src="/images-infotech/HRTC2.jpg"/>
+            <ol>
+        
+                <p> Pink</p><br><hr><br>
+                <p>OtterBox Figura Series Cse
+                    with MagSafe for iphone 16 pro</p><br><hr><br>
+                <p>Price: £44.95 </p><br><hr><br>
+                <p>Designed to interact with the Apple MagSafe ecosystem
+                    Compatible with MagSafe chargers
+                    Flexible, soft-touch material
+                    Unique hydro-dipped art
+                    Ultraslim, one-piece design</p><br><hr><br>
+                <p>Apple Battersea
+                    Ground Floor Turbine Hall ACircus Road WLondon SW11 8AL</p>
+            
+            <br>
+            <a href="index.html#page3"><h3>back</h3> </a>
+            </ol>
+        </footer>
+        </div>
+
+
+
+</body>
+</html>
